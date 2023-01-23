@@ -1,8 +1,8 @@
 <template>
      
-    <div >
+    <div class=" text-center" >
         
-        <img :src="gifUrl" onerror="this.src='../../public/img/txt-logo.png'">
+        <img class="gif-container" :src="gifUrl" onerror="this.src='../../public/img/txt-logo.png'">
     </div>
 </template>
 
@@ -21,5 +21,11 @@ import gifUrl from '../../public/gifs/jumbo.gif';
 </script>
 
 <style lang="scss" scoped>
+
+
+.gif-container{
+    width: 100vw;
+    height: 300px;
+}
 
 </style>
