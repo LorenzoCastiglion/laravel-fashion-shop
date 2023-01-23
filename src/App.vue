@@ -3,7 +3,7 @@
     <AppHeader></AppHeader>
   </header>
 
- 
+  <router-view></router-view>
     
   
   
