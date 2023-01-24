@@ -1,13 +1,13 @@
 <template>
      
     <div class=" text-center" >
-        
         <img class="gif-container" :src="gifUrl" onerror="this.src='../../public/img/txt-logo.png'">
     </div>
+
 </template>
 
 <script>
-import gifUrl from '../../public/gifs/jumbo.gif';
+import gifUrl from '../../src/gifs/jumbo.gif';
     export default {
         
         name:'JumboComponent',

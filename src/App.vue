@@ -5,7 +5,10 @@
 
   <router-view></router-view>
     
-  <AppFooter></AppFooter>
+
+  <footer>
+<AppFooter></AppFooter>
+  </footer>
   
 </template>
 <script>

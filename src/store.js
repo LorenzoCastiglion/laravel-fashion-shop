@@ -33,6 +33,7 @@ export const store = reactive({
             routeName: 'store',
             storeItem:[
                 {
+
                     pagename: 'Nails',
                     url:"#"
                 },
@@ -56,6 +57,7 @@ export const store = reactive({
                     pagename: 'Wellness',
                     url:"#"
                 }
+
             ]
         },
         {
@@ -63,6 +65,7 @@ export const store = reactive({
             routeName: 'about',
             storeItem:[
                 {
+
                     pagename: 'Who',
                     url:"#"
                 },
@@ -89,6 +92,7 @@ export const store = reactive({
             routeName: 'contacts',
             storeItem:[
                 {
+
                     pagename: 'Contrada Fiorentino 28 Appartamento 53',
                     url:"#"
                 },
