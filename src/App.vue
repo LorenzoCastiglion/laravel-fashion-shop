@@ -6,7 +6,7 @@
   <router-view></router-view>
     
   <footer>
-
+<AppFooter></AppFooter>
   </footer>
   
 </template>

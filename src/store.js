@@ -32,6 +32,12 @@ export const store = reactive({
             label: 'Store',
             routeName: 'store',
             storeItem:[
+                {
+                    pagename: 'ciao',
+                    url:"#"
+                },
+
+            
 
             ]
         },
@@ -39,14 +45,20 @@ export const store = reactive({
             label: 'About',
             routeName: 'about',
             storeItem:[
-                
+                {
+                    pagename: 'ciao',
+                    url:"#"
+                }
             ]
         },
         {
             label: 'Contacts',
             routeName: 'contacts',
             storeItem:[
-                
+                {
+                    pagename: 'ciao',
+                    url:"#"
+                }
             ]
         },
     ]
