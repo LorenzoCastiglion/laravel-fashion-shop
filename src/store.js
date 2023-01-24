@@ -33,11 +33,30 @@ export const store = reactive({
             routeName: 'store',
             storeItem:[
                 {
-                    pagename: 'ciao',
+
+                    pagename: 'Nails',
                     url:"#"
                 },
-
-            
+                {
+                    pagename: 'Creams',
+                    url:"#"
+                },
+                {
+                    pagename: 'Face',
+                    url:"#"
+                },
+                {
+                    pagename: 'Body',
+                    url:"#"
+                },
+                {
+                    pagename: 'Hair',
+                    url:"#"
+                },
+                {
+                    pagename: 'Wellness',
+                    url:"#"
+                }
 
             ]
         },
@@ -46,7 +65,24 @@ export const store = reactive({
             routeName: 'about',
             storeItem:[
                 {
-                    pagename: 'ciao',
+
+                    pagename: 'Who',
+                    url:"#"
+                },
+                {
+                    pagename: 'Where',
+                    url:"#"
+                },
+                {
+                    pagename: 'When',
+                    url:"#"
+                },
+                {
+                    pagename: 'How',
+                    url:"#"
+                },
+                {
+                    pagename: 'Why',
                     url:"#"
                 }
             ]
@@ -56,9 +92,26 @@ export const store = reactive({
             routeName: 'contacts',
             storeItem:[
                 {
-                    pagename: 'ciao',
+
+                    pagename: 'Contrada Fiorentino 28 Appartamento 53',
                     url:"#"
-                }
+                },
+                {
+                    pagename: 'Genova',
+                    url:"#"
+                },
+                {
+                    pagename: '79547',
+                    url:"#"
+                },
+                {
+                    pagename: '+20 67 7212625',
+                    url:"#"
+                },
+                {
+                    pagename: 'make-up@make_up.up',
+                    url:"#"
+                },
             ]
         },
     ]

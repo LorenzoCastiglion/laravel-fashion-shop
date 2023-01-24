@@ -5,6 +5,7 @@
 
   <router-view></router-view>
     
+
   <footer>
 <AppFooter></AppFooter>
   </footer>
@@ -17,15 +18,7 @@ import AppFooter from './components/FooterComponent.vue';
     name: 'App',
     components:{
       AppHeader,
-     AppFooter
-    },
-
-    
-      
-  
-
-
-
+      AppFooter,
     
   }
 </script>
