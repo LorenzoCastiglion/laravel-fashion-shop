@@ -11,7 +11,7 @@
                 <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li id="nav-txt" class="nav-item text-white hover-underline-animation" v-for="(item, index) in store.menuItems" :key="index">
-                            <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white">
+                            <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white nav-link">
                                 {{ item.label }}.
 
                             </router-link>
@@ -78,6 +78,8 @@ export default {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+
 
 
 </style>

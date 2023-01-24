@@ -1,15 +1,62 @@
 <template>
-    <div>
-
-    </div>
+    
+   <div class="container">
+       <div class=" cards-container">
+        <CardComponent v-for="(item,index) in products" :key="index" :card="item">
+            
+        </CardComponent>
+       </div>
+   </div>
 </template>
 
 <script>
-    export default {
-        name:'Store'
-    }
+
+import axios from 'axios';
+import { store } from '../store';
+import CardComponent from '../components/CardComponent.vue';
+
+export default {
+    name: 'Store',
+
+    components:{
+        CardComponent
+    },
+    data() {
+        return {
+            store,
+            products: null,
+           
+        }
+    },
+
+    methods: {
+        getProduct() {
+
+            axios.get(`${this.store.apiBaseUrl}/products`).then((response) => {
+                console.log(response.data.results)
+                this.products = response.data.results;
+                this.currentPage = response.data.results.current_page;
+                this.lastPage = response.data.results.last_page;
+                this.total = response.data.results.total;
+            })
+        },
+    },
+
+    mounted() {
+
+this.getProduct()
+}
+
+
+}
+
+
 </script>
 
 <style lang="scss" scoped>
+
+.cards-container{
+    height: 65vh;
+}
 
 </style>
