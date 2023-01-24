@@ -19,10 +19,12 @@ import AppFooter from './components/FooterComponent.vue';
     components:{
       AppHeader,
       AppFooter,
-    }
     
   }
 </script>
 
 <style lang="scss" scoped>
+
+
+
 </style>

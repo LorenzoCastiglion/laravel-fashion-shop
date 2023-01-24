@@ -1,10 +1,15 @@
 <template>
     
-   <div class="container">
-       <div class=" cards-container">
-        <CardComponent v-for="(item,index) in products" :key="index" :card="item">
+   <div  class="container m-auto">
+       <div class=" cards-container overflow-auto">
+
+        <div class="d-flex justify-content-between gap-5 flex-wrap">
             
-        </CardComponent>
+            <CardComponent v-for="(item,index) in products" :key="index" :card="item"></CardComponent>
+            
+       
+        
+    </div>
        </div>
    </div>
 </template>
@@ -58,5 +63,7 @@ this.getProduct()
 .cards-container{
     height: 65vh;
 }
+
+
 
 </style>
