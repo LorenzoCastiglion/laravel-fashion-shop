@@ -25,6 +25,30 @@ export const store = reactive({
        
 
       
+    ],
+
+    footerItems:[
+        {
+            label: 'Store',
+            routeName: 'store',
+            storeItem:[
+
+            ]
+        },
+        {
+            label: 'About',
+            routeName: 'about',
+            storeItem:[
+                
+            ]
+        },
+        {
+            label: 'Contacts',
+            routeName: 'contacts',
+            storeItem:[
+                
+            ]
+        },
     ]
 
 
