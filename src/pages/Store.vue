@@ -1,17 +1,11 @@
 <template>
-    
-   <div  class="container m-auto">
-       <div class=" cards-container overflow-auto">
-
-        <div class="d-flex justify-content-between gap-5 flex-wrap">
-            
-            <CardComponent v-for="(item,index) in products" :key="index" :card="item"></CardComponent>
-            
-       
-        
+    <div class="container m-auto">
+        <div class=" cards-container overflow-auto">
+            <div class="d-flex justify-content-between gap-5 flex-wrap">
+                <CardComponent v-for="(item, index) in products" :key="index" :card="item"></CardComponent>
+            </div>
+        </div>
     </div>
-       </div>
-   </div>
 </template>
 
 <script>
@@ -23,14 +17,14 @@ import CardComponent from '../components/CardComponent.vue';
 export default {
     name: 'Store',
 
-    components:{
+    components: {
         CardComponent
     },
     data() {
         return {
             store,
             products: null,
-           
+
         }
     },
 
@@ -49,8 +43,8 @@ export default {
 
     mounted() {
 
-this.getProduct()
-}
+        this.getProduct()
+    }
 
 
 }
@@ -59,11 +53,7 @@ this.getProduct()
 </script>
 
 <style lang="scss" scoped>
-
-.cards-container{
+.cards-container {
     height: 65vh;
 }
-
-
-
 </style>
