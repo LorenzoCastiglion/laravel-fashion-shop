@@ -2,40 +2,48 @@
     <section class="contact_me py-5">
         <div class="inner-wrapper">
             <div class="container-fluid text-center">
-                <h2 class="text-uppercase">contact me</h2>
+                <h2 class="text-uppercase text-white fw-bold mb-5"><img class="logo-w me-3"
+                        src="../../public/img/logo.png" alt="">contact
+                    us...</h2>
                 <div v-if="success" class="alert alert-success text-start" role="alert">
-                    Messaggio inviato con successo!
+                    The message has been successfully sent!
                 </div>
-                <div class="row">
-                    <form class="col-12 text-start" @submit.prevent="sendForm()">
-                        <div class="mb-3">
-                            <input class="border-0 border-bottom form-control" type="text" name="name" id="name"
-                                placeholder="Name" v-model="name" :class="{ 'is-invalid': errors.name }" required>
-                            <p v-for="(error, index) in errors.name" :key="index" class="invalid-feedback">
-                                {{ error }}
-                            </p>
-                        </div>
-                        <div class="mb-3">
-                            <input class="border-0 border-bottom form-control" type="text" name="email" id="email"
-                                placeholder="Email" v-model="email" :class="{ 'is-invalid': errors.email }" required>
-                            <p v-for="(error, index) in errors.email" :key="index" class="invalid-feedback">
-                                {{ error }}
-                            </p>
+                <div class="d-flex justify-content-center">
+                    <div class="row w-50">
+                        <form class="col-12 text-start" @submit.prevent="sendForm()">
+                            <div class="mb-4">
+                                <input class="border-0 border-bottom form-control" type="text" name="name" id="name"
+                                    placeholder="Name" v-model="name" :class="{ 'is-invalid': errors.name }" required>
+                                <p v-for="(error, index) in errors.name" :key="index" class="invalid-feedback">
+                                    {{ error }}
+                                </p>
+                            </div>
+                            <div class="mb-4">
+                                <input class="border-0 border-bottom form-control" type="text" name="email" id="email"
+                                    placeholder="Email" v-model="email" :class="{ 'is-invalid': errors.email }"
+                                    required>
+                                <p v-for="(error, index) in errors.email" :key="index" class="invalid-feedback">
+                                    {{ error }}
+                                </p>
 
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="border-0 border-bottom form-control" name="message" id="message" cols="30"
-                                rows="10" placeholder="Message" v-model="message"
-                                :class="{ 'is-invalid': errors.message }" required></textarea>
-                            <p v-for="(error, index) in errors.message" :key="index" class="invalid-feedback">
-                                {{ error }}
-                            </p>
-                        </div>
-                        <button class="btn btn-lg btn-primary text-white" type="submit" :disabled="loading">{{
-                            loading?
-                        'Sending...': 'Send'
-                        }}</button>
-                    </form>
+                            </div>
+                            <div class="mb-5">
+                                <textarea class="border-0 border-bottom form-control" name="message" id="message"
+                                    cols="30" rows="10" placeholder="Message" v-model="message"
+                                    :class="{ 'is-invalid': errors.message }" required></textarea>
+                                <p v-for="(error, index) in errors.message" :key="index" class="invalid-feedback">
+                                    {{ error }}
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5 mb-5">
+                                <button class="btn btn-lg btn-light text-black w-25" type="submit"
+                                    :disabled="loading">{{
+    loading?
+                                    'Sending...': 'Send'
+                                    }}</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,5 +93,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.logo-w {
+    width: 80px;
+}
 </style>
