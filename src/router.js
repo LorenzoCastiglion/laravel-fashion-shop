@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './pages/HomePage.vue';
 import Store from './pages/Store.vue';
 import About from './pages/About.vue';
-import Contacts from './pages/Contacts.vue';
+import ContactUs from './pages/ContactUs.vue';
 
 
 
@@ -28,7 +28,7 @@ const router = createRouter({
         {
             path: '/contacts',
             name: 'contacts',
-            component: Contacts
+            component: ContactUs
         },
        
     ]
