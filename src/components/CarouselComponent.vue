@@ -1,12 +1,14 @@
 <template>
     <carousel :itemsToShow="3.95" :wrapAround="true" :transition="5000" :autoplay="3000">
         <slide v-for="(slide, index) in homePaths" :key="index">
-            <img class="carousel__item" :src="slide.path" :alt="slide.alt">
+            <div class="col-6">
+                <img class="carousel__item" :src="slide.path" :alt="slide.alt">
+                <h3 class="text-white pt-2">{{ slide.info }}</h3>
+            </div>
         </slide>
 
         <template #addons>
-            <navigation />
-            <pagination />
+            <navigation class="text-white" />
         </template>
     </carousel>
 </template>
@@ -32,21 +34,25 @@ export default {
                 {
                     path: 'img/moisturizer.png',
                     alt: 'moisturizer',
+                    info: 'makeup',
                     id: 1,
                 },
                 {
                     path: 'img/makeup.png',
                     alt: 'makeup',
+                    info: 'makeup',
                     id: 2,
                 },
                 {
                     path: 'img/eyeshadow.png',
                     alt: 'eyeshadow',
+                    info: 'makeup',
                     id: 3,
                 },
                 {
                     path: 'img/eyeliner.png',
                     alt: 'eyeliner',
+                    info: 'makeup',
                     id: 4,
                 },
             ]
@@ -97,6 +103,6 @@ export default {
 }
 
 img {
-    width: 150px;
+    width: 120px;
 }
 </style>
