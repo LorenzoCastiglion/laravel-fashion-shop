@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-trail class="box">
+        <div class="box">
             <div class="box2"></div>
         </div>
     </div>
