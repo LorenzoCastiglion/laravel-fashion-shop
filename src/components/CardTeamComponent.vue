@@ -8,19 +8,20 @@
                 </div>
             </div>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center align-items-center">
           <div class="col-lg-2 col-md-6 col-12 mt-4 pt-2"  v-for="(team, index) in teams" :key="index">
             <div class="team text-center rounded p-3 py-4">
               <div>
-                <img :src="team.img" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                <img :src="team.img" class="img-fluid avatar avatar-medium shadow rounded-pill facce" alt="">
                   <div class="content mt-3">
                     <h4 class="title mb-0">{{team.name}}</h4>
+                    <h4 class="title mb-0">{{team.surname}}</h4>
                     <small class="text-muted">{{team.work}}</small>
                       <ul class="list-unstyled mt-3 social-icon social mb-0">
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-github" title="Linkedin"></i></a></li>
                     </ul>
                   </div>
               </div>
@@ -49,29 +50,34 @@
                     teams: [
                     {
                         id: 1,
-                        img: 'img/logo.png',
-                        name: 'Alessio Bonadonna',
+                        img: 'img/Alessio.png',
+                        name: 'Alessio',
+                        surname:'Bonadonna',
                         work: 'Junior Developer',
                     },
                     {   
                         id: 2,
-                        img: 'img/logo.png',
-                        name: 'Angelo Calabrò',
+                        img: 'img/Angelo.png',
+                        name: 'Angelo',
+                        surname:'Calabrò',
                         work: 'Junior Developer',
                     },
                     {
-                        img: 'img/logo.png',
-                        name: 'Simone Carrabba',
+                        img: 'img/SimoneCarrabba.png',
+                        name: 'Simone',
+                        surname:'Carrabba',
                         work: 'Junior Developer',
                     },
                     {
-                        img: 'img/logo.png',
-                        name: 'Lorenzo Castiglion',
+                        img: 'img/Lorenzo.png',
+                        name: 'Lorenzo',
+                        surname:'Castiglion',
                         work: 'Junior Developer',
                     },
                     {
-                        img: 'img/logo.png',
-                        name: 'Simone Conti',
+                        img: 'img/SimoneConti.png',
+                        name: 'Simone',
+                        surname:'Conti',
                         work: 'Junior Developer',
                     }
                 ]
@@ -86,6 +92,7 @@
     </script>
     
     <style lang="scss" scoped>
+    @use './../assets/styles/partials/variables' as *;
     .box{
         height: 700px;
         
@@ -118,7 +125,9 @@
     
     .team .content .title, .team-list .content .title {
       font-size: 18px;
+      color: $red;
     }
+    
     
     .team .overlay {
       position: absolute;
@@ -147,12 +156,24 @@
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
     }
     
+    .facce{
+      transition: 0.7s;
+    }
     .team:hover {
       -webkit-transform: translateY(-7px);
               transform: translateY(-7px);
       -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
               box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+              .facce{
+    background-color: $red;
+
+   }
+
+    
     }
+
+  
     
     .team:hover .overlay {
       opacity: 0.6;
@@ -208,6 +229,8 @@
         letter-spacing: 0.5px;
         font-size: 30px;
     }
+
+   
     
     
     

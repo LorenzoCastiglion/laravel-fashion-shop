@@ -4,9 +4,14 @@
      <div class="d-flex justify-content-between">
         <div>
          <img src="../../public/img/txt-logo.png" alt="">
+           <!-- Copyright -->
+  <div class="mt-5 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 <span class="text-reset fw-bold">Boolness</span>
+  </div>
+  <!-- Copyright -->
         </div>
          <div class="text-white d-flex" v-for="item in store.footerItems" :key="index">
-             <ul>{{ item.label }}<span class=" dot">.</span>
+             <ul class="title">{{ item.label }}<span class=" dot">.</span>
              <li v-for="x in item.storeItem" class="hover-underline-animation">
                  {{ x.pagename }}
              </li>
@@ -15,11 +20,7 @@
      </div>
     </div>
 
-    <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2023 <span class="text-reset fw-bold">Boolness</span>
-  </div>
-  <!-- Copyright -->
+  
     </footer>
  </template>
  
@@ -44,6 +45,9 @@
     font-size: 30px;
     
 }
+
+
+
 
  ul{
     font-size: 22px;

@@ -1,12 +1,12 @@
 <template>
-    <div class="row">
+    
           <div class="col-12 text-center">
-              <div class="section-title mb-4 pb-2">
-                    <h4 class="title mb-4 text-white">Our main sponsor</h4>
+              <div class="section-title ">
+                    <h4 class="title mt-4 text-white">Our main sponsor</h4>
                     
                 </div>
             </div>
-        </div>
+        
     <div class="container mb-5">
     <carousel :itemsToShow="3.95" :wrapAround="true" :transition="5000" :autoplay="3000">
         <slide v-for="(slide, index) in homePaths" :key="index">
@@ -15,9 +15,7 @@
             </div>
         </slide>
 
-        <template #addons>
-            <navigation class="text-white" />
-        </template>
+        
     </carousel>
     </div>
 </template>

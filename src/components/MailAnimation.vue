@@ -87,7 +87,7 @@ h1 {
     color: #ffa3a3;
     font-weight: 400;
     letter-spacing: 0.07em;
-    text-shadow: 0px 0px 5px#ffa3a3;
+    text-shadow: 0px 0px 2px#ffa3a3;
 }
 
 </style>
