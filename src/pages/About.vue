@@ -1,20 +1,40 @@
 <template>
-    <div>
+    
         <div class="box">
-            <div class="box2"></div>
+            
+                <TextAnimation></TextAnimation>
+            
         </div>
-    </div>
+    
 </template>
 
 <script>
+import TextAnimation from '../components/TextAnimation.vue';
     export default {
-        name:'About'
+        
+        name:'About',
+
+        components:{
+TextAnimation
+        },
+
+        data(){
+            return{
+
+            }
+        },
+
+
+        method:{
+
+        }
     }
 </script>
 
 <style lang="scss" scoped>
 .box{
     height: 700px;
+    
 }
 
 
