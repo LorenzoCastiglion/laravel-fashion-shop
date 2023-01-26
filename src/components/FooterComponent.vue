@@ -6,7 +6,7 @@
          <img src="../../public/img/logo-footer.png" alt="">
         </div>
          <div class="text-white d-flex" v-for="item in store.footerItems" :key="index">
-             <ul>{{ item.label }}
+             <ul>{{ item.label }}<span class=" dot">.</span>
              <li v-for="x in item.storeItem" class="hover-underline-animation">
                  {{ x.pagename }}
              </li>
@@ -37,6 +37,13 @@
  </script>
  
  <style lang="scss" scoped>
+
+.dot{
+    color: #d62828;
+    font-size: 30px;
+    
+}
+
  ul{
     font-size: 22px;
     font-weight: 500;
@@ -69,7 +76,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #d62828;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }

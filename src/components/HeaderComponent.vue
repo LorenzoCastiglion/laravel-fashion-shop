@@ -12,7 +12,7 @@
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li id="nav-txt" class="nav-item text-white hover-underline-animation" v-for="(item, index) in store.menuItems" :key="index">
                             <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white nav-link">
-                                {{ item.label }}.
+                                {{ item.label }}<span class=" dot">.</span>
 
                             </router-link>
                         </li>
@@ -39,8 +39,16 @@ export default {
 }
 </script>
 
+
+
 <style lang="scss" scoped>
 
+
+.dot{
+    color: #d62828;
+    font-size: 30px;
+    
+}
 
 #burger{
     color: white;
@@ -69,7 +77,7 @@ export default {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #d62828;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
