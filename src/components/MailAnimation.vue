@@ -68,7 +68,7 @@ body {
 h1 {
     
     font-size: 70px;
-    color: rgb(223, 217, 217);
+    color: rgb(255, 255, 255);
     font-weight: 200;
     cursor: default;
     letter-spacing: 0.03em;

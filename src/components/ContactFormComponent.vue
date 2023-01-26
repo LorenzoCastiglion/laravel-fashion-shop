@@ -12,14 +12,14 @@
                     <div class="row w-50">
                         <form class="col-12 text-start" @submit.prevent="sendForm()">
                             <div class="mb-4">
-                                <input class="border-0 border-bottom form-control" type="text" name="name" id="name"
+                                <input class="border border-light text-white bg-transparent form-control" type="text" name="name" id="name"
                                     placeholder="Name" v-model="name" :class="{ 'is-invalid': errors.name }" required>
                                 <p v-for="(error, index) in errors.name" :key="index" class="invalid-feedback">
                                     {{ error }}
                                 </p>
                             </div>
                             <div class="mb-4">
-                                <input class="border-0 border-bottom form-control" type="text" name="email" id="email"
+                                <input class=" border border-light text-white bg-transparent form-control " type="text" name="email" id="email"
                                     placeholder="Email" v-model="email" :class="{ 'is-invalid': errors.email }"
                                     required>
                                 <p v-for="(error, index) in errors.email" :key="index" class="invalid-feedback">
@@ -28,7 +28,7 @@
 
                             </div>
                             <div class="mb-5">
-                                <textarea class="border-0 border-bottom form-control" name="message" id="message"
+                                <textarea class="border border-light text-white bg-transparent form-control" name="message" id="message"
                                     cols="30" rows="10" placeholder="Message" v-model="message"
                                     :class="{ 'is-invalid': errors.message }" required></textarea>
                                 <p v-for="(error, index) in errors.message" :key="index" class="invalid-feedback">
@@ -36,7 +36,7 @@
                                 </p>
                             </div>
                             <div class="d-flex justify-content-center mt-5 mb-5">
-                                <button class="btn btn-lg btn-light text-black w-25" type="submit"
+                                <button class="mail text-white w-25 " type="submit"
                                     :disabled="loading">{{
     loading?
                                     'Sending...': 'Send'
@@ -93,7 +93,72 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use './../assets/styles/partials/variables' as *;
 .logo-w {
     width: 80px;
+}
+
+.mail{
+background-color: transparent;
+border: 1px solid white;
+border-radius: 16px;
+padding: 5px;
+transition: 0.3s;
+
+
+&:after{
+position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: $red;
+  transition: all 0.3s ease;
+}
+
+&:hover{
+    font-weight: 900;
+}
+
+&:hover:after{
+    left: auto;
+  right: 0;
+  width: 100%;
+}
+
+
+
+}
+
+.btn-16 {
+   background: #000;
+  color: #fff;
+  z-index: 1;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #e0e5ec;
+  transition: all 0.3s ease;
+}
+.btn-16:hover {
+  color: #000;
+}
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
 }
 </style>
