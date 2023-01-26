@@ -1,5 +1,5 @@
 <template>
-    <h1 ref="targetEl" id="bubble-hover">
+    <h1 ref="targetEl" id="bubble-hover" class="text-center">
       <span v-for="(char, idx) in phrase" :key="idx" :data-index="idx" class="hover-char" @mouseover="mouseOverHandler" @mouseleave="removeClasses" >{{ char }}</span>
     </h1>
   </template>
@@ -49,11 +49,13 @@ export default {
 
 
 <style lang="scss" scoped>
+
+
 * {
-    font-family: 'Montserrat', sans-serif;
-    transition: all;
-   transition: 0.35s;
     
+    // transition: all;
+    transition:0.15s ease-in-out;
+    font-feature-settings: unset;
 }
 
 body {
@@ -64,24 +66,28 @@ body {
 }
 
 h1 {
+    
     font-size: 90px;
-    color: white;
-    font-weight: 100;
+    color: rgb(223, 217, 217);
+    font-weight: 200;
     cursor: default;
+    letter-spacing: 0.03em;
     
 }
 
 
 .hovered {
-    color: rgb(190, 22, 22);
-    font-weight: 400;
-    transition: font-weight 0.35s ease-in-out;
+    color:#d62828;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-shadow: 0px 0px 5px #d62828;
 }
 
 .hovered-adjacent {
-    color: rgb(199, 111, 111);
-    font-weight: 300;
-    transition: font-weight 0.35s ease-in-out;
+    color: #ffa3a3;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    text-shadow: 0px 0px 5px#ffa3a3;
 }
 
 </style>

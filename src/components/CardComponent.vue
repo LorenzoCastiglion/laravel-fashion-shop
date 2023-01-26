@@ -40,10 +40,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.kard{
+// .kard{
     
     
-}
+// }
 
 .placeholder-img{
     transform: scale(0.6);
