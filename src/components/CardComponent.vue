@@ -81,7 +81,7 @@ export default {
 
 .img-container{
     border: solid 1px $red;
-    box-shadow: inset 0 0 20px $red;
+    box-shadow: inset 10px 10px 50px $red;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -89,7 +89,7 @@ export default {
 
 .img{
    width: 100%;
-   transform: scale(0.9);
+   transform: scale(1);
    
    object-fit: contain;
    object-position: center;
