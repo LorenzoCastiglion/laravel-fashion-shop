@@ -42,10 +42,11 @@ export default {
 
 
 <style lang="scss" scoped>
+@use './../assets/styles/partials/variables' as *;
 
 
 .dot{
-    color: #d62828;
+    color: $red;
     font-size: 30px;
     
 }
@@ -77,7 +78,7 @@ export default {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #d62828;
+    background-color: $red;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }

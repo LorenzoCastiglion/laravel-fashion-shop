@@ -1,7 +1,7 @@
 <template>
     <div class="container m-auto">
         <div class=" cards-container overflow-auto">
-            <div class="d-flex justify-content-between gap-5 flex-wrap">
+            <div class="d-flex justify-content-around gap-5  flex-wrap">
                 <CardComponent v-for="(item, index) in products" :key="index" :card="item"></CardComponent>
             </div>
         </div>
