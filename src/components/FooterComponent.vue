@@ -3,7 +3,7 @@
     <div class="container pt-4">
      <div class="d-flex justify-content-between">
         <div>
-         <img src="../../public/img/logo-footer.png" alt="">
+         <img src="../../public/img/txt-logo.png" alt="">
         </div>
          <div class="text-white d-flex" v-for="item in store.footerItems" :key="index">
              <ul>{{ item.label }}<span class=" dot">.</span>

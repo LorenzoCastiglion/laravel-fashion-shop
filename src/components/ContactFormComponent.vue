@@ -1,10 +1,10 @@
 <template>
-    <section class="contact_me py-5">
+    <section class="contact_me py-3">
         <div class="inner-wrapper">
             <div class="container-fluid text-center">
-                <h2 class="text-uppercase text-white fw-bold mb-5"><img class="logo-w me-3"
+                <!-- <h2 class="text-uppercase text-white fw-bold mb-5"><img class="logo-w me-3"
                         src="../../public/img/logo.png" alt="">contact
-                    us...</h2>
+                    us...</h2> -->
                 <div v-if="success" class="alert alert-success text-start" role="alert">
                     The message has been successfully sent!
                 </div>

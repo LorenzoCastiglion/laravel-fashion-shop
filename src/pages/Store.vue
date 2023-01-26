@@ -32,7 +32,7 @@ export default {
         getProduct() {
 
             axios.get(`${this.store.apiBaseUrl}/products`).then((response) => {
-                console.log(response.data.results)
+                console.log(response.data.results) 
                 this.products = response.data.results;
                 this.currentPage = response.data.results.current_page;
                 this.lastPage = response.data.results.last_page;

@@ -8,9 +8,9 @@
 import { ref, onMounted } from 'vue'
 
 export default {
-    name: 'TextAnimation',
+    name: 'MailAnimation',
     setup() {
-        const phrase = ref("IL NOSTRO TEAM")
+        const phrase = ref("Inviaci una mail")
         const targetEl = ref(null)
         const hoverChars = ref(null)
 
