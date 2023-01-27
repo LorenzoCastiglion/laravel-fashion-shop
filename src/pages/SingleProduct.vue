@@ -71,7 +71,7 @@ axios.get(`${this.store.apiBaseUrl}/products/${this.$route.params.slug}`).then((
  },
  mounted(){
     setTimeout(
-        this.getProduct,3000
+        this.getProduct,2000
     )
     
  }
