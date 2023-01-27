@@ -2,7 +2,7 @@
     
           <div class="col-12 text-center">
               <div class="section-title ">
-                    <h4 class="title text-uppercase fw-bold mt-4 text-white">Our main sponsor</h4>
+                    <h4 class="title text-uppercase fw-bold mt-4 text-white">Our main sponsor <span class="dot">.</span></h4>
                     
                 </div>
             </div>
@@ -81,6 +81,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use './../assets/styles/partials/variables' as *;
+
+.dot{
+    color:$red;
+    font-size: 50px;
+    
+}
 .carousel__slide {
     padding: 5px;
 }

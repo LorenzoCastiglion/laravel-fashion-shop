@@ -59,6 +59,12 @@
 
     h1{
         font-size: 70px;
+        transition: 0.5s;
+    }
+
+    h1:hover{
+       
+    text-shadow: 0px 0px 6px $red;
     }
     
     </style>

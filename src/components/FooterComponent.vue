@@ -1,6 +1,6 @@
 <template>
     <footer>
-    <div class="container pt-4">
+    <div class="container">
      <div class="d-flex justify-content-between">
         <div>
          <img src="../../public/img/txt-logo.png" alt="">

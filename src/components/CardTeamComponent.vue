@@ -1,14 +1,14 @@
 <template>
-      <div class="container bootdey">
-        <div class="row">
-          <div class="col-12 text-center">
+      <div class="container">
+       
+          <!-- <div class="col-12 text-center">
               <div class="section-title mb-4 pb-2 mt-4">
                     
                     
-                    <!-- <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p> -->
+                    <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
                 </div>
-            </div>
-        </div>
+            </div> -->
+       
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-lg-2 col-md-6 col-12 mt-1 pt-1"  v-for="(team, index) in teams" :key="index">
             <div class="team text-center rounded p-3 py-4">

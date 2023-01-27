@@ -133,32 +133,5 @@ position: absolute;
 
 }
 
-.btn-16 {
-   background: #000;
-  color: #fff;
-  z-index: 1;
-}
-.btn-16:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
-  background: #e0e5ec;
-  transition: all 0.3s ease;
-}
-.btn-16:hover {
-  color: #000;
-}
-.btn-16:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-}
-.btn-16:active {
-  top: 2px;
-}
+
 </style>
