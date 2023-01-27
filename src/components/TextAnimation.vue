@@ -10,7 +10,7 @@ import { ref, onMounted } from 'vue'
 export default {
     name: 'TextAnimation',
     setup() {
-        const phrase = ref("IL NOSTRO TEAM")
+        const phrase = ref("Il nostro Team")
         const targetEl = ref(null)
         const hoverChars = ref(null)
 
@@ -78,14 +78,14 @@ h1 {
 
 .hovered {
     color:#d62828;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 0.07em;
     text-shadow: 0px 0px 5px #d62828;
 }
 
 .hovered-adjacent {
     color: #ef5656;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 0.07em;
     text-shadow: 0px 0px 2px#ffa3a3;
 }

@@ -1,7 +1,8 @@
 <template>
-    <h1 ref="targetEl" id="bubble-hover" class="text-center">
+    <h3 ref="targetEl" id="bubble-hover" class="text-center">
+        
       <span v-for="(char, idx) in phrase" :key="idx" :data-index="idx" class="hover-char" @mouseover="mouseOverHandler" @mouseleave="removeClasses" >{{ char }}</span>
-    </h1>
+    </h3>
   </template>
 
 <script>
@@ -10,7 +11,7 @@ import { ref, onMounted } from 'vue'
 export default {
     name: 'TeamAnimation',
     setup() {
-        const phrase = ref("Build responsive, mobile-first projects on the web with the world's most popular front-end component library.")
+        const phrase = ref("Meet our talented team of web developers who specialize in creating visually stunning and user-friendly websites. With years of experience and a passion for innovation, they're dedicated to delivering exceptional results.")
         const targetEl = ref(null)
         const hoverChars = ref(null)
 
@@ -22,6 +23,7 @@ export default {
             hoverChars.value.forEach((char) => {
                 char.classList.remove("hovered")
                 char.classList.remove("hovered-adjacent")
+                char.classList.remove("hovered-adjacent-plus")
             })
         }
 
@@ -31,11 +33,17 @@ export default {
             const index = parseInt(currentElement.getAttribute("data-index"), 10)
             const prevIndex = index === 0 ? null : index - 1
             const nextIndex = index === phrase.value.length - 1 ? null : index + 1
+            const prevPrevIndex = index === 0 ? null : index - 2
+            const nextNextIndex = index === phrase.value.length - 1 ? null : index + 2
             const prevEl = prevIndex !== null && document.querySelector(`[data-index="${prevIndex}"]`)
             const nextEl = prevIndex !== null && document.querySelector(`[data-index="${nextIndex}"]`)
+            const prevPrevEl = prevIndex !== null && document.querySelector(`[data-index="${prevPrevIndex}"]`)
+            const nextNextEl = prevIndex !== null && document.querySelector(`[data-index="${nextNextIndex}"]`)
             e.target.classList.add("hovered")
             prevEl && prevEl.classList.add("hovered-adjacent")
             nextEl && nextEl.classList.add("hovered-adjacent")
+            prevPrevEl && prevPrevEl.classList.add("hovered-adjacent-plus")
+            nextPrevEl && nextNextEl.classList.add("hovered-adjacent-plus")
         }
 
         return {
@@ -65,7 +73,7 @@ body {
     height: 300px;
 }
 
-h1 {
+h3 {
     
     font-size: 30px;
     color: rgb(255, 255, 255);
@@ -79,15 +87,23 @@ h1 {
 .hovered {
     color:#d62828;
     font-weight: 900;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.1em;
     text-shadow: 0px 0px 5px #d62828;
 }
 
 .hovered-adjacent {
     color: #ef5656;
     font-weight: 400;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.09em;
     text-shadow: 0px 0px 2px#ffa3a3;
+}
+.hovered-adjacent-plus{
+   
+    color: #faadad;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 2px#ffa3a3;
+
 }
 
 </style>

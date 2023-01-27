@@ -1,6 +1,6 @@
 <template>
-    <header class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <header class="">
+        <nav class="container navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid">
                 <img  src="../../public/img/txt-logo.png" alt="">
                 <button id="burger" class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
@@ -88,7 +88,12 @@ export default {
     transform-origin: bottom left;
 }
 
-
+header{
+    -webkit-box-shadow: 0 4px 6px -1px $red;
+  -moz-box-shadow: 0 4px 6px -1px $red;
+  box-shadow: 0 4px 6px -1px $red;
+    margin-bottom: 50px;
+}
 
 
 </style>

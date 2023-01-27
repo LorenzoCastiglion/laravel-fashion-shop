@@ -3,16 +3,14 @@
         <div class="row">
           <div class="col-12 text-center">
               <div class="section-title mb-4 pb-2 mt-4">
-                    <h4 class="title mb-4 text-white">Dream Team</h4>
-                    <p class="m-auto col-6">
-                      <TeamAnimation/>
-                    </p>
+                    
+                    
                     <!-- <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p> -->
                 </div>
             </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-lg-2 col-md-6 col-12 mt-4 pt-2"  v-for="(team, index) in teams" :key="index">
+          <div class="col-lg-2 col-md-6 col-12 mt-1 pt-1"  v-for="(team, index) in teams" :key="index">
             <div class="team text-center rounded p-3 py-4">
               <div>
                 <img :src="team.img" class="img-fluid avatar avatar-medium shadow rounded-pill facce" alt="">
@@ -21,10 +19,10 @@
                     <h4 class="title mb-0">{{team.surname}}</h4>
                     <small class="text-muted">{{team.work}}</small>
                       <ul class="list-unstyled mt-3 social-icon social mb-0">
-                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                        <li class="list-inline-item me-2"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-github" title="Linkedin"></i></a></li>
+                        <li class="list-inline-item me-2 social"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                        <li class="list-inline-item me-2 social"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                        <li class="list-inline-item me-2 social"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        <li class="list-inline-item me-2 social"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-github" title="Linkedin"></i></a></li>
                     </ul>
                   </div>
               </div>
@@ -39,13 +37,13 @@
     </template>
     
     <script>
-    import TeamAnimation from './TeamAnimation.vue';
+    
         export default {
             
             name:'CardTeamComponent',
     
             components:{
-TeamAnimation
+
             },
     
             
@@ -234,7 +232,25 @@ TeamAnimation
         font-size: 30px;
     }
 
-   
+
+    .social{
+      transition: 0.5s;
+    }
+   .social:hover{
+    
+    transform: scale(1.2);
+
+    a{
+      border-color: $red;
+
+      i{
+      color: $red;
+      
+    }
+    }
+    
+    
+   }
     
     
     
