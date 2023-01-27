@@ -3,7 +3,9 @@
           <div>
               <!-- <TextAnimation></TextAnimation> -->
           </div>
-          
+          <h1 class="text-center fw-bold text-white">
+            MEET THE TEAM <span class="dot">.</span>
+          </h1>
           <div class="m-auto col-8 pt-4">
                       <TeamAnimation/>
                     </div>
@@ -48,9 +50,16 @@
     </script>
     
     <style lang="scss" scoped>
+    @use './../assets/styles/partials/variables' as *;
     
-    
-    
+    .dot{
+        color: $red;
+        font-size: 80px;
+    }
+
+    h1{
+        font-size: 70px;
+    }
     
     </style>
     

@@ -11,7 +11,7 @@ import { ref, onMounted } from 'vue'
 export default {
     name: 'TeamAnimation',
     setup() {
-        const phrase = ref("Meet our talented team of web developers who specialize in creating visually stunning and user-friendly websites. With years of experience and a passion for innovation, they're dedicated to delivering exceptional results.")
+        const phrase = ref("We are a team of web developers who specialize in creating visually stunning and user-friendly websites. With years of experience and a passion for innovation, they're dedicated to delivering exceptional results.")
         const targetEl = ref(null)
         const hoverChars = ref(null)
 
@@ -57,7 +57,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+@use './../assets/styles/partials/variables' as *;
 
 * {
     
@@ -85,10 +85,10 @@ h3 {
 
 
 .hovered {
-    color:#d62828;
+    color:$red;
     font-weight: 900;
     letter-spacing: 0.1em;
-    text-shadow: 0px 0px 5px #d62828;
+    text-shadow: 0px 0px 5px $red;
 }
 
 .hovered-adjacent {

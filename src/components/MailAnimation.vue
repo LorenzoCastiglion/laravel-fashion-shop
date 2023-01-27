@@ -49,7 +49,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+@use './../assets/styles/partials/variables' as *;
 
 * {
     
@@ -77,10 +77,10 @@ h1 {
 
 
 .hovered {
-    color:#d62828;
+    color:$red;
     font-weight: 900;
     letter-spacing: 0.07em;
-    text-shadow: 0px 0px 5px #d62828;
+    text-shadow: 0px 0px 5px $red;
 }
 
 .hovered-adjacent {
