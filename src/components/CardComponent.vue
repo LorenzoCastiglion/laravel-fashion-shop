@@ -85,17 +85,18 @@ export default {
 
 
 .img-container{
-    border: solid 1px $red;
-    box-shadow: inset 10px 10px 50px $red;
+    border: solid 2px $red;
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    background-color: white;
 }
 
 .img{
    width: 100%;
    transform: scale(1);
-   
+  
+    
    object-fit: contain;
    object-position: center;
 }

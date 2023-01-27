@@ -43,7 +43,7 @@ export default {
             prevEl && prevEl.classList.add("hovered-adjacent")
             nextEl && nextEl.classList.add("hovered-adjacent")
             prevPrevEl && prevPrevEl.classList.add("hovered-adjacent-plus")
-            nextPrevEl && nextNextEl.classList.add("hovered-adjacent-plus")
+            nextNextEl && nextNextEl.classList.add("hovered-adjacent-plus")
         }
 
         return {

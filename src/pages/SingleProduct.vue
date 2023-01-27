@@ -1,18 +1,45 @@
 <template>
-    <section v-if="product">
-        <div class="d-flex">
-            <div class="img-container col-4">
-                <img src="" alt="">
-            </div>
-            <div class="col-8">
-                <h2>{{ product.name }}</h2>
-            </div>
+    
+    <div class="container">
+        <section class="prod d-flex align-items-center" v-if="product">
+            <div class="d-flex gap-5 align-items-center">
+                <div class="img-container col-4 overflow-hidden d-flex align-items-center">
+                    <img :src="`http://localhost:5173/storage/app/${product.image}`" alt="">
+                </div>
+                <div class="col-6 flex-column ">
+                    <div class="d-flex justify-content-between ">
+                        <div class="mb-3">
+                            <h2 class="prod-name m-0">{{ product.name }}</h2>
+                            <a class="prod-brand  text-capitalize" :href="`https://www.${product.brand.name}.com`">{{ product.brand.name }}</a>
+                          
+                        </div>
+                        <div class="d-flex pe-3 ">
+                            <h3 class="prod-price ">{{ product.price }}</h3>
+                            <h4 class="prod-price-sign ps-2 ">{{ product.price_sign }}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-white">{{ product.description }}</p>
+                        <p class="text-white">Texture: {{ product.texture.name }}</p>
+                    </div>
+                    <div class="text-end">
+                        <a class="text-white text-decoration-none hover-underline-animation" href="">
+                            <router-link to="/store" active-class="active" class="nav-link text-white nav-link ">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                    Back to <span class=" dot">/</span> Store<span class=" dot">.</span>
+                                </router-link>
+                        </a>
+                    </div>
+                    
+                </div>
 
-        </div>
-    </section>
-    <section v-else>
-
-    </section>
+               
+            </div>
+        </section>
+        <section class="loader" v-else>
+        loading..
+        </section>
+    </div>
 </template>
 
 <script>
@@ -43,11 +70,110 @@ axios.get(`${this.store.apiBaseUrl}/products/${this.$route.params.slug}`).then((
 },
  },
  mounted(){
-    this.getProduct()
+    setTimeout(
+        this.getProduct,3000
+    )
+    
  }
     }
 </script>
 
 <style lang="scss" scoped>
+@use './../assets/styles/partials/variables' as *;
+
+
+.dot{
+    color: $red;
+    font-size: 30px;
+    
+}
+
+.loader{
+    height: calc(100vh - 373px );
+}
+
+.prod{
+    height: calc(100vh - 373px)
+}
+
+.prod-name, .prod-price-sign, .prod-price {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: $red;
+}
+
+.prod-price{
+    font-size: 40px;
+}
+.prod-name{
+    font-size: 50px;
+}
+
+.prod-brand{
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-decoration: underline $red;
+    transition: 0.5s;
+    
+    &::after{
+        font-family: Arial, Helvetica, sans-serif;
+        display: none;
+        content: ' go to site';
+   margin-left: 5px;
+   font-size: 15px;
+   transition: 0.5s;
+    }
+
+
+    &:hover::after{
+   display: inline-block;
+ 
+}
+
+}
+
+.img-container{
+    border: solid 1px $red;
+   background-color: white;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+   
+    
+}
+
+img{
+        width: 100%;
+   transform: scale(0.5);
+   object-fit: contain;
+   object-position: center;
+    
+   
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 
 </style>
