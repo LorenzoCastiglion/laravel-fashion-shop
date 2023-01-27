@@ -169,6 +169,7 @@
 
               .facce{
     background-color: $red;
+   
     
    }
 
