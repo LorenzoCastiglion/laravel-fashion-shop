@@ -4,7 +4,10 @@
           <div class="col-12 text-center">
               <div class="section-title mb-4 pb-2 mt-4">
                     <h4 class="title mb-4 text-white">Dream Team</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
+                    <p class="m-auto col-6">
+                      <TeamAnimation/>
+                    </p>
+                    <!-- <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p> -->
                 </div>
             </div>
         </div>
@@ -36,12 +39,13 @@
     </template>
     
     <script>
+    import TeamAnimation from './TeamAnimation.vue';
         export default {
             
             name:'CardTeamComponent',
     
             components:{
-
+TeamAnimation
             },
     
             
@@ -167,7 +171,7 @@
 
               .facce{
     background-color: $red;
-
+    
    }
 
     

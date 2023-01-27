@@ -7,7 +7,7 @@
                 </div>
             </div>
         
-    <div class="container mb-5">
+    <div class="container mb-4">
     <carousel :itemsToShow="3.95" :wrapAround="true" :transition="5000" :autoplay="3000">
         <slide v-for="(slide, index) in homePaths" :key="index">
             <div class="col-6">
