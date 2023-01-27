@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="box overflow-auto">
           <div>
               <!-- <TextAnimation></TextAnimation> -->
           </div>
@@ -64,8 +64,9 @@
 
     h1:hover{
        
-    text-shadow: 0px 0px 6px $red;
+    text-shadow: 8px 8px 18px $red;
     }
+    
     
     </style>
     

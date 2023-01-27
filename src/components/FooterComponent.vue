@@ -1,11 +1,11 @@
 <template>
-    <footer>
+
     <div class="container">
      <div class="d-flex justify-content-between">
         <div>
          <img src="../../public/img/txt-logo.png" alt="">
            <!-- Copyright -->
-  <div class="mt-5 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+  <div class="mt-3 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2023 <span class="text-reset fw-bold">Boolness</span>
   </div>
   <!-- Copyright -->
@@ -21,7 +21,7 @@
     </div>
 
   
-    </footer>
+    
  </template>
  
  <script>
@@ -53,7 +53,7 @@
     font-size: 22px;
     font-weight: 500;
     li{
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 300;
         list-style: none;
         color: grey;
