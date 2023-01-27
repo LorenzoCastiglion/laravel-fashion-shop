@@ -7,7 +7,12 @@
 
         <div class=" d-flex flex-column">
             <div class="d-flex justify-content-between">
-                <h3 class="prod-name hover-underline-animation ">{{ card.name }}</h3>
+
+                <router-link 
+                            :to="{ name: 'singleproduct', params: { slug: card.slug } }">
+                            <h3 class="prod-name hover-underline-animation ">{{ card.name }}</h3>
+                        </router-link>
+                
                 <div class="d-flex">
                     <h4>{{ card.price_sign }}&nbsp;</h4>
                     <h4 class=" fw-bold fs-3">{{ card.price }}</h4>

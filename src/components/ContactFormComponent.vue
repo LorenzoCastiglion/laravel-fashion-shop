@@ -35,7 +35,7 @@
                                     {{ error }}
                                 </p>
                             </div>
-                            <div class="d-flex justify-content-center mt-5 mb-5">
+                            <div class="d-flex justify-content-center mt-5 mb-3">
                                 <button class="mail text-white w-25 " type="submit"
                                     :disabled="loading">{{
     loading?

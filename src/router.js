@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage.vue';
 import Store from './pages/Store.vue';
 import About from './pages/About.vue';
 import ContactUs from './pages/ContactUs.vue';
+import SingleProduct from './pages/SingleProduct.vue';
 
 
 
@@ -30,6 +31,12 @@ const router = createRouter({
             name: 'contacts',
             component: ContactUs
         },
+        {
+            path: '/store/:slug',
+            name: 'singleproduct',
+            component: SingleProduct
+        },
+
        
     ]
 });
