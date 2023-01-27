@@ -1,5 +1,6 @@
 <template>
-    <header class="">
+<!-- MENU BOOTSTRAP -->
+        <!--<header class="">
         <nav class="container navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid">
                 <img  src="../../public/img/txt-logo.png" alt="">
@@ -22,7 +23,49 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>-->
+
+    <!-- FINE MENU BOOTSTRAP -->
+
+    <header>
+        <nav class="container navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img  src="../../public/img/txt-logo.png" alt="">
+
+                <div id="NavDesktop" class="collapse navbar-collapse justify-content-end" >
+                    <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                        <li id="nav-txt" class="nav-item text-white hover-underline-animation" v-for="(item, index) in store.menuItems" :key="index">
+                            <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white nav-link">
+                                {{ item.label }}<span class=" dot">.</span>
+
+                            </router-link>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+<!-- Toggle Menu--> 
+    <div id="NavMobile">
+    <button @click="isMenuOpen = !isMenuOpen"><i class="fa-regular fa-bars"></i></button>
+    <div v-if="isMenuOpen" class="d-flex justidy-content-start">
+        <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                        <li id="nav-txt" class="nav-item text-white hover-underline-animation" v-for="(item, index) in store.menuItems" :key="index">
+                            <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white nav-link">
+                                {{ item.label }}<span class=" dot">.</span>
+
+                            </router-link>
+                        </li>
+        </ul>
+    </div>
+  </div>
+<!-- Fine Toggle Menu-->
+
+  </div>
+  </nav>
+</header>
+
+    
 </template>
 
 <script>
@@ -31,8 +74,8 @@ export default {
     name: 'AppHeader',
     data() {
         return {
-            store
-
+            store,
+            isMenuOpen: false,
         }
     }
 
@@ -51,10 +94,7 @@ export default {
     
 }
 
-#burger{
-    color: white;
-    background-color: white;
-}
+
 #nav-txt{
     font-family: 'Montserrat', sans-serif;
     font-weight:700;
@@ -95,5 +135,27 @@ header{
     margin-bottom: 50px;
 }
 
+button{
+    background-color: $red;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: white;
+    border: $red;
+}
+
+
+
+//CSS Toogle Menu
+@media only screen and (min-width: 480px) {
+#NavDesktop{
+    display: none;
+}
+}
+
+@media only screen and (min-width: 992px) {
+#NavMobile{
+    display: none;
+}
+}
 
 </style>
