@@ -1,7 +1,17 @@
 <template>
 
-    <div class="container my-2">
-        <section class="prod d-flex align-items-center" v-if="product">
+    <div class="container my-2 tutto ">
+
+        
+        <section class="prod d-flex align-items-center position-relative" v-if="product">
+
+
+            <div class="position position-absolute dots-container">
+            <img class="dots" src="../../public/img/logo.png" alt="">
+        </div>
+        <div class="position position-absolute dots2-container">
+            <img class="dots2" src="../../public/img/logo.png" alt="">
+        </div>
             <div class="d-flex gap-5 align-items-center">
                 <div class="img-container col-4   overflow-hidden d-flex align-items-center">
                     <img :src="`http://localhost:5173/storage/app/${product.image}`" alt="">
@@ -112,7 +122,7 @@ export default {
 }
 
 .load-img {
-    width: 400px;
+    width: 300px;
 }
 
 .progress-loader {
@@ -233,5 +243,47 @@ img {
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+
+
+// movable dots
+.dots{
+    width: 100px;
+    transform: rotate(45deg);
+}
+
+.dots-container{
+    top: 200px;
+    right: 50px;
+    z-index: -1;
+    transition: all 0.8s ease;
+}
+
+.dots2{
+    width: 50px;
+    transform: rotate(200deg);
+}
+
+.dots2-container{
+    bottom: 50px;
+    left: 400px;
+    z-index: -1;
+    transition: all 0.8s ease;
+}
+
+.tutto:hover{
+
+    .dots-container{
+        top: 300px;
+        right: 40px;
+        transform: rotate(30deg);
+    }
+
+    .dots2-container{
+        bottom: 60px;
+        left: 300px;
+        transform: rotate(30deg);
+    }
 }
 </style>

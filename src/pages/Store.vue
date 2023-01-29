@@ -1,7 +1,7 @@
 <template>
     <div class="container ">
         <!-- SELECT PER TIPO-->
-        <div class="filter mb-4 ">
+        <div class="filter mb-5 ">
             <!-- @change="getProductsByType"> -->
 <div class="d-flex">
     
