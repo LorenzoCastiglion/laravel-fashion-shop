@@ -152,7 +152,7 @@ button{
 
 .fade-enter-active,
 .fade-leave-active {
-transition: all 0.5s ease-in-out;
+transition: all 0.7s ease-in-out;
  
 }
 
