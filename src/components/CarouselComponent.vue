@@ -1,9 +1,9 @@
 <template>
-    <carousel :itemsToShow="3.95" :wrapAround="true" :transition="5000" :autoplay="3000">
+    <carousel :itemsToShow="1" :wrapAround="true" :transition="1000" :autoplay="1500">
         <slide v-for="(slide, index) in homePaths" :key="index">
-            <div class="col-6">
+            <div class="">
                 <img class="carousel__item" :src="slide.path" :alt="slide.alt">
-                <h3 class="text-white pt-2">{{ slide.info }}</h3>
+                <h3 class="text-white pt-2 text-center">{{ slide.info }}<span class="dot">.</span></h3>
             </div>
         </slide>
 
@@ -32,9 +32,9 @@ export default {
 
             homePaths: [
                 {
-                    path: 'img/moisturizer.png',
+                    path: 'img/cream.png',
                     alt: 'moisturizer',
-                    info: 'makeup',
+                    info: 'cream',
                     id: 1,
                 },
                 {
@@ -44,16 +44,22 @@ export default {
                     id: 2,
                 },
                 {
-                    path: 'img/eyeshadow.png',
+                    path: 'img/brushes.png',
                     alt: 'eyeshadow',
-                    info: 'makeup',
+                    info: 'brushes',
                     id: 3,
                 },
                 {
                     path: 'img/eyeliner.png',
                     alt: 'eyeliner',
-                    info: 'makeup',
+                    info: 'eyeliner',
                     id: 4,
+                },
+                {
+                    path: 'img/lipstick.png',
+                    alt: 'lipstick',
+                    info: 'lipstick',
+                    id: 5,
                 },
             ]
         }
@@ -64,6 +70,13 @@ export default {
 <style lang="scss" scoped>
 @use './../assets/styles/partials/variables' as *;
 @import "../../node_modules/vue3-carousel/dist/carousel.css";
+
+
+.dot{
+    color: $red;
+    font-size: 30px;
+    
+}
 .carousel__slide {
     padding: 5px;
 }
