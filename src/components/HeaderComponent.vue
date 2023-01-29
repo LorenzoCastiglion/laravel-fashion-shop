@@ -46,19 +46,24 @@
                 </div>
 
 <!-- Toggle Menu--> 
-    <div id="NavMobile">
-    <button @click="isMenuOpen = !isMenuOpen"><i class="fa-regular fa-bars"></i></button>
-    <div v-if="isMenuOpen" class="d-flex justidy-content-start">
-        <ul class="navbar-nav  mb-2 mb-lg-0 ">
-                        <li id="nav-txt" class="nav-item text-white hover-underline-animation" v-for="(item, index) in store.menuItems" :key="index">
-                            <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white nav-link">
-                                {{ item.label }}<span class=" dot">.</span>
 
-                            </router-link>
-                        </li>
-        </ul>
-    </div>
-  </div>
+   
+        <div id="NavMobile" class="d-flex flex-column align-items-end">
+        <button @click="isMenuOpen = !isMenuOpen"><i class="fa-regular fa-bars  "></i></button>
+        <transition name="fade">
+            <div v-if="isMenuOpen" class=" text-end">
+                <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                                <li id="nav-txt" class="nav-item text-white hover-underline-animation" v-for="(item, index) in store.menuItems" :key="index">
+                                    <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white nav-link">
+                                        {{ item.label }}<span class=" dot">.</span>
+                                    </router-link>
+                                </li>
+                </ul>
+            </div>
+        </transition>
+          </div>
+   
+          
 <!-- Fine Toggle Menu-->
 
   </div>
@@ -136,12 +141,27 @@ header{
 }
 
 button{
+   
     background-color: $red;
     border-radius: 5px;
     padding: 5px 20px;
     color: white;
     border: $red;
 }
+
+
+.fade-enter-active,
+.fade-leave-active {
+transition: all 0.5s ease-in-out;
+ 
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    transform: translate(10px ,0);
+    opacity: 0;
+}
+
 
 
 

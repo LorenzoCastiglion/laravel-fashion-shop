@@ -8,7 +8,7 @@
         </slide>
 
         <template #addons>
-            <navigation class="text-white" />
+            <navigation class="text-danger " />
         </template>
     </carousel>
 </template>
@@ -62,6 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use './../assets/styles/partials/variables' as *;
 .carousel__slide {
     padding: 5px;
 }
@@ -105,4 +106,7 @@ export default {
 img {
     width: 120px;
 }
+
+
+
 </style>
