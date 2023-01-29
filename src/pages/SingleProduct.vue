@@ -3,16 +3,17 @@
     <div class="container my-2">
         <section class="prod d-flex align-items-center" v-if="product">
             <div class="d-flex gap-5 align-items-center">
-                <div class="img-container col-4 overflow-hidden d-flex align-items-center">
+                <div class="img-container col-4   overflow-hidden d-flex align-items-center">
                     <img :src="`http://localhost:5173/storage/app/${product.image}`" alt="">
                 </div>
-                <div class="col-6 flex-column ">
+                <div class="col-lg-6    flex-column ">
                     <div class="d-flex justify-content-between ">
                         <div class="mb-3">
                             <h2 class="prod-name m-0">{{ product.name }}</h2>
-                            <a class="prod-brand  text-capitalize" :href="`https://www.${trim(product.brand.name)}.com`">{{
-                                product.brand.name
-                            }}</a>
+                            <a class="prod-brand  text-capitalize"
+                                :href="`https://www.${trim(product.brand.name)}.com`">{{
+                                    product.brand.name
+                                }}</a>
 
                         </div>
                         <div class="d-flex pe-3 ">
@@ -39,7 +40,17 @@
             </div>
         </section>
         <section class="loader" v-else>
-            loading..
+            <div class="d-flex  justify-content-center ">
+                <div>
+                    <img class="load-img" src="../../public/img/logo.png" alt="">
+                    <div class="progress-loader mt-5">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
         </section>
     </div>
 </template>
@@ -67,18 +78,19 @@ export default {
                     this.$router.push({ name: 'notfound' })
                 }
             })
-            
+
         },
 
-        trim(str){
+        trim(str) {
             str = str.replace(/\s+/g, "");
             return str
-        
-    }},
+
+        }
+    },
 
     mounted() {
         setTimeout(
-            this.getProduct, 2000
+            this.getProduct, 1500
         )
 
     }
@@ -97,6 +109,44 @@ export default {
 
 .loader {
     height: calc(100vh - 373px);
+}
+
+.load-img {
+    width: 400px;
+}
+
+.progress-loader {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  background: rgba(236, 236, 238, 0.253);
+  height: 10px;
+  border-radius: 7px;
+}
+
+.progress {
+  width: 1px;
+  height: 10px;
+  border-radius: 7px;
+  background: $red;
+  transition: 0.5s;
+  animation: loading_44 3s ease infinite;
+}
+
+@keyframes loading_44 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
 }
 
 .prod {
@@ -157,9 +207,9 @@ img {
     transform: scale(0.5);
     object-fit: contain;
     object-position: center;
-
-
 }
+
+
 
 
 .hover-underline-animation {

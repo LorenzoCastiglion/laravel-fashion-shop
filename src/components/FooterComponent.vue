@@ -1,7 +1,7 @@
 <template>
 
     <div class="container">
-     <div class="d-flex justify-content-between">
+     <div class="d-flex justify-content-between foot">
         <div>
          <img src="../../public/img/txt-logo.png" alt="">
            <!-- Copyright -->
@@ -10,8 +10,8 @@
   </div>
   <!-- Copyright -->
         </div>
-         <div class="text-white d-flex" v-for="item in store.footerItems" :key="index">
-             <ul class="title">{{ item.label }}<span class=" dot">.</span>
+         <div class="text-white d-flex title" v-for="item in store.footerItems" :key="index">
+             <ul class="">{{ item.label }}<span class=" dot">.</span>
              <li v-for="x in item.storeItem" class="hover-underline-animation">
                  {{ x.pagename }}
              </li>
@@ -89,6 +89,14 @@
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 570px ) {
+
+ ul{
+    display: none;
+ }
+
 }
     
  </style>
