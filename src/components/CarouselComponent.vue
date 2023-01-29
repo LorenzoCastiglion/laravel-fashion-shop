@@ -8,7 +8,7 @@
         </slide>
 
         <template #addons>
-            <navigation class="text-danger " />
+            <navigation />
         </template>
     </carousel>
 </template>
@@ -63,6 +63,7 @@ export default {
 
 <style lang="scss" scoped>
 @use './../assets/styles/partials/variables' as *;
+@import "../../node_modules/vue3-carousel/dist/carousel.css";
 .carousel__slide {
     padding: 5px;
 }
@@ -106,6 +107,8 @@ export default {
 img {
     width: 120px;
 }
+
+
 
 
 

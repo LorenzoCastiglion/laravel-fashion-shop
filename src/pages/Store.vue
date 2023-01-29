@@ -3,28 +3,38 @@
         <!-- SELECT PER TIPO-->
         <div class="filter mb-4 ">
             <!-- @change="getProductsByType"> -->
+<div class="d-flex">
+    
+                <div class=" d-flex flex-column">
+                    <p class="text-white m-0"> Type</p>
+                    <select v-model="selectedType" class="me-3 bg-transparent text-white ">
+                        <option v-for="(type, index) in types" :key="index" :value="type.id">
+                            {{ type.name }}
+                        </option>
+                    </select>
+                </div>
+    
+                <!-- SELECT PER BRAND-->
+                <!-- @change="getProductsByBrands"> -->
+                <div  class=" d-flex flex-column">
+                    <p class="text-white m-0"> Brand</p>
+                    <select v-model="selectedBrand" class="me-3 bg-transparent text-white">
+                        
+                        <option v-for="(brand, index) in brands" :key="index" :value="brand.id">
+                            {{ brand.name }}
+                        </option>
+                    </select>
+                </div>
 
-            <select v-model="selectedType" class="me-3 bg-transparent text-white ">
-                <option value="" disabled selected hidden class="text-white">Choose a Type</option>
-                <option v-for="(type, index) in types" :key="index" :value="type.id">
-                    {{ type.name }}
-                </option>
-            </select>
-
-            <!-- SELECT PER BRAND-->
-            <!-- @change="getProductsByBrands"> -->
-            <select v-model="selectedBrand" class="me-3 bg-transparent text-white">
-                <option v-for="(brand, index) in brands" :key="index" :value="brand.id">
-                    {{ brand.name }}
-                </option>
-            </select>
+                <button @click="getProduct()"><span>Search <i class="fa-solid fa-magnifying-glass"></i> </span></button>
+</div>
             <!-- select per texture-->
             <!-- <select v-model="selectedTexture" @change="getProductsByTextures">
         <option v-for="(texture, index) in textures" :key="index" :value="texture.id">
           {{ texture.name }}
         </option>
       </select> -->
-            <button @click="getProduct()"><span>Search <i class="fa-solid fa-magnifying-glass"></i> </span></button>
+            
 
 
         </div>
@@ -253,7 +263,7 @@ button {
     cursor: pointer;
     border: none;
     padding: 0.5rem 1rem;
-    margin: 0;
+    margin: 10px 0;
     font-family: inherit;
     font-size: inherit;
     position: relative;

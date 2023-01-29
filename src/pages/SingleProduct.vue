@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container">
+    <div class="container my-2">
         <section class="prod d-flex align-items-center" v-if="product">
             <div class="d-flex gap-5 align-items-center">
                 <div class="img-container col-4 overflow-hidden d-flex align-items-center">
@@ -22,7 +22,7 @@
                     </div>
                     <div>
                         <p class="text-white">{{ product.description }}</p>
-                        <p class="text-white">Texture: {{ product.texture.name }}</p>
+                        <p class="text-white m-0">Texture: {{ product.texture.name }}</p>
                     </div>
                     <div class="text-end">
                         <a class="text-white text-decoration-none hover-underline-animation" href="">
