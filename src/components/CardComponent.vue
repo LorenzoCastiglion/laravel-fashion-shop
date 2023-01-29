@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex text-white col-5 kard ">
+    <div class="d-flex text-white col-lg-5 col-md-12 kard  ">
         <div class="d-flex align-self-center img-container col-4 overflow-hidden mx-3">
             <!-- <img class="placeholder-img" src="../../public/img/logo.png" alt=""> -->
             <img class="img" :src="`http://localhost:5173/storage/app/${card.image}`" alt="">
