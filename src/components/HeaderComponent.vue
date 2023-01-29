@@ -138,7 +138,7 @@ header{
     -webkit-box-shadow: 0 1.5px 6px -1px $red;
   -moz-box-shadow: 0 1.5px 6px -1px $red;
   box-shadow: 0 1.5px 6px -1px $red;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 button{

@@ -170,7 +170,6 @@
               .facce{
     background-color: $red;
    
-    
    }
 
     
