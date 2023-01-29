@@ -6,7 +6,7 @@
           <h1 class="text-center fw-bold text-white">
             MEET THE TEAM <span class="dot">.</span>
           </h1>
-          <div class="m-auto col-8 pt-4">
+          <div class="m-auto col-8 my-4">
                       <TeamAnimation/>
                     </div>
                     

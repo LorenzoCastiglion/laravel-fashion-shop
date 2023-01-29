@@ -1,5 +1,5 @@
 <template>
-    
+
     <div class="container">
         <section class="prod d-flex align-items-center" v-if="product">
             <div class="d-flex gap-5 align-items-center">
@@ -10,8 +10,10 @@
                     <div class="d-flex justify-content-between ">
                         <div class="mb-3">
                             <h2 class="prod-name m-0">{{ product.name }}</h2>
-                            <a class="prod-brand  text-capitalize" :href="`https://www.${product.brand.name}.com`">{{ product.brand.name }}</a>
-                          
+                            <a class="prod-brand  text-capitalize" :href="`https://www.${trim(product.brand.name)}.com`">{{
+                                product.brand.name
+                            }}</a>
+
                         </div>
                         <div class="d-flex pe-3 ">
                             <h3 class="prod-price ">{{ product.price }}</h3>
@@ -26,18 +28,18 @@
                         <a class="text-white text-decoration-none hover-underline-animation" href="">
                             <router-link to="/store" active-class="active" class="nav-link text-white nav-link ">
                                 <i class="fa-solid fa-arrow-left"></i>
-                                    Back to <span class=" dot">/</span> Store<span class=" dot">.</span>
-                                </router-link>
+                                Back to <span class=" dot">/</span> Store<span class=" dot">.</span>
+                            </router-link>
                         </a>
                     </div>
-                    
+
                 </div>
 
-               
+
             </div>
         </section>
         <section class="loader" v-else>
-        loading..
+            loading..
         </section>
     </div>
 </template>
@@ -45,110 +47,118 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-    export default {
-        name: 'SingleProduct',
+export default {
+    name: 'SingleProduct',
 
-        data(){
-            return{
-                store,
-                product:null
-            }
-        },
+    data() {
+        return {
+            store,
+            product: null
+        }
+    },
 
-        methods:{
-            getProduct() {
-
-axios.get(`${this.store.apiBaseUrl}/products/${this.$route.params.slug}`).then((response) => {
-    console.log(response.data.results) 
-    if (response.data.success) {
+    methods: {
+        getProduct() {
+            axios.get(`${this.store.apiBaseUrl}/products/${this.$route.params.slug}`).then((response) => {
+                console.log(response.data.results)
+                if (response.data.success) {
                     this.product = response.data.results;
                 } else {
                     this.$router.push({ name: 'notfound' })
                 }
-    
-})
-},
- },
- mounted(){
-    setTimeout(
-        this.getProduct,2000
-    )
-    
- }
+            })
+            
+        },
+
+        trim(str){
+            str = str.replace(/\s+/g, "");
+            return str
+        
+    }},
+
+    mounted() {
+        setTimeout(
+            this.getProduct, 2000
+        )
+
     }
+}
 </script>
 
 <style lang="scss" scoped>
 @use './../assets/styles/partials/variables' as *;
 
 
-.dot{
+.dot {
     color: $red;
     font-size: 30px;
-    
+
 }
 
-.loader{
-    height: calc(100vh - 373px );
+.loader {
+    height: calc(100vh - 373px);
 }
 
-.prod{
+.prod {
     height: calc(100vh - 373px)
 }
 
-.prod-name, .prod-price-sign, .prod-price {
+.prod-name,
+.prod-price-sign,
+.prod-price {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: $red;
 }
 
-.prod-price{
+.prod-price {
     font-size: 40px;
 }
-.prod-name{
+
+.prod-name {
     font-size: 50px;
 }
 
-.prod-brand{
+.prod-brand {
     font-size: 24px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     text-decoration: underline $red;
     transition: 0.5s;
-    
-    &::after{
+
+    &::after {
         font-family: Arial, Helvetica, sans-serif;
         display: none;
         content: ' go to site';
-   margin-left: 5px;
-   font-size: 15px;
-   transition: 0.5s;
+        margin-left: 5px;
+        font-size: 15px;
+        transition: 0.5s;
     }
 
 
-    &:hover::after{
-   display: inline-block;
- 
-}
+    &:hover::after {
+        display: inline-block;
+
+    }
 
 }
 
-.img-container{
+.img-container {
     border: solid 1px $red;
-   background-color: white;
+    background-color: white;
     width: 350px;
     height: 350px;
     border-radius: 50%;
-   
-    
+
+
 }
 
-img{
-        width: 100%;
-   transform: scale(0.5);
-   object-fit: contain;
-   object-position: center;
-    
-   
+img {
+    width: 100%;
+    transform: scale(0.5);
+    object-fit: contain;
+    object-position: center;
+
+
 }
 
 
@@ -174,6 +184,4 @@ img{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
-
 </style>

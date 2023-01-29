@@ -8,7 +8,7 @@
             </div>
         
     <div class="container mb-4">
-    <carousel :itemsToShow="3.95" :wrapAround="true" :transition="5000" :autoplay="3000">
+    <carousel :itemsToShow="3.95" :wrapAround="true" :transition="2000" :autoplay="1000">
         <slide v-for="(slide, index) in homePaths" :key="index">
             <div class="col-6">
                 <img class="carousel__item" :src="slide.path" :alt="slide.alt">

@@ -75,9 +75,9 @@ body {
 
 h3 {
     
-    font-size: 30px;
+    font-size: 42px;
     color: rgb(255, 255, 255);
-    font-weight: 200;
+    font-weight: 300;
     cursor: default;
     letter-spacing: 0.03em;
     
@@ -93,14 +93,14 @@ h3 {
 
 .hovered-adjacent {
     color: #ef5656;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.09em;
     text-shadow: 0px 0px 2px#ffa3a3;
 }
 .hovered-adjacent-plus{
    
     color: #faadad;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.06em;
     text-shadow: 0px 0px 2px#ffa3a3;
 
