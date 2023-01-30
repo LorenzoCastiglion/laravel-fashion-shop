@@ -40,8 +40,9 @@
         </div>
 
         <div class="cards-container overflow-auto">
-            <div v-if="products.length == 0">
-                prodotti non disponibili
+            <div class="text-center" v-if="products.length == 0">
+               <img src="../../public/img/logo.png" alt="">
+                <h2>No such Product</h2>
             </div>
             <div class="d-flex justify-content-around gap-5 flex-wrap col-sm-12 " v-else-if="products">
                 <CardComponent v-for="(item, index) in products" :key="index" :card="item"></CardComponent>
@@ -323,8 +324,9 @@ option[value=""][disabled] {
     display: none;
 }
 
-.box{
-        
-    }
+h2{
+    color: $red;
+    margin-top: 20px;
+}
 
 </style>
