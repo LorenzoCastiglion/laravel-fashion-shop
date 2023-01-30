@@ -3,9 +3,9 @@
     <div class="container">
         <div class="d-flex justify-content-between foot">
             <div>
-                <img class="img" src="../../public/img/logo.png" alt="">
+                <img class="img pt-3" src="../../public/img/logo.png" alt="">
                 <!-- Copyright -->
-                <div class="mt-3 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+                <div class="mt-1 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
                     © 2023 <span class="text-reset fw-bold">Boolness</span>
                 </div>
                 <!-- Copyright -->
