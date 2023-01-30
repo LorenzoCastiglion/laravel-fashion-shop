@@ -27,6 +27,7 @@
                 </div>
 
                 <button @click="getProduct()"><span>Search <i class="fa-solid fa-magnifying-glass"></i> </span></button>
+               
 </div>
             <!-- select per texture-->
             <!-- <select v-model="selectedTexture" @change="getProductsByTextures">
@@ -43,6 +44,7 @@
             <div class="text-center" v-if="products.length == 0">
                <img src="../../public/img/logo.png" alt="">
                 <h2>No such Product</h2>
+                
             </div>
             <div class="d-flex justify-content-around gap-5 flex-wrap col-sm-12 " v-else-if="products">
                 <CardComponent v-for="(item, index) in products" :key="index" :card="item"></CardComponent>
