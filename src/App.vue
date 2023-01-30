@@ -6,9 +6,9 @@
   <router-view></router-view>
     
 
-  <footer>
+  
 <AppFooter></AppFooter>
-  </footer>
+ 
   
 </template>
 <script>
@@ -25,7 +25,7 @@ import AppFooter from './components/FooterComponent.vue';
 </script>
 
 <style lang="scss" scoped>
-
+@use './assets/styles/partials/variables' as *;
 
 
 </style>

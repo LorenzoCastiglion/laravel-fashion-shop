@@ -1,5 +1,5 @@
 <template>
-    <div class="container ">
+    <div class="container box ">
         <!-- SELECT PER TIPO-->
         <div class="filter mb-2 ">
             <!-- @change="getProductsByType"> -->
@@ -323,5 +323,8 @@ option[value=""][disabled] {
     display: none;
 }
 
+.box{
+        
+    }
 
 </style>

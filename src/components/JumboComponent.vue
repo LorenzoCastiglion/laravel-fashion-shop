@@ -1,6 +1,6 @@
 <template>
      
-    <div class=" text-center" >
+    <div class=" text-center " >
         <img class="gif-container" :src="gifUrl" onerror="this.src='../../public/img/txt-logo.png'">
     </div>
 
@@ -24,8 +24,8 @@ import gifUrl from '../../src/gifs/jumbo.gif';
 
 
 .gif-container{
-    width: 100vw;
-    height: 300px;
+   width: 95%;
+    height: 370px;
 }
 
 </style>

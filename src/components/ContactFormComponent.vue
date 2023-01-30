@@ -1,7 +1,9 @@
 <template>
     <section class="contact_me py-3">
-        <div class="inner-wrapper">
+        <div class="">
             <div class="container-fluid text-center">
+
+               
                 <!-- <h2 class="text-uppercase text-white fw-bold mb-5"><img class="logo-w me-3"
                         src="../../public/img/logo.png" alt="">contact
                     us...</h2> -->
@@ -74,7 +76,10 @@ export default {
                 email: this.email,
                 message: this.message
             }
-            axios.post(`${this.store.apiBaseUrl}/contacts`, data).then((response) => {
+          
+
+            setTimeout(() => {
+                axios.post(`${this.store.apiBaseUrl}/contacts`, data).then((response) => {
                 console.log(response.data);
                 this.success = response.data.success;
                 if (!this.success) {
@@ -85,8 +90,20 @@ export default {
                     this.email = '';
                     this.message = '';
                 }
-                this.loading = false;
+               
             });
+                this.name='';
+          this.email='';
+          this.message='';
+          this.loading = false;
+            
+            }, 1000);
+            
+
+            
+
+         
+        
         }
     }
 }
@@ -132,6 +149,9 @@ position: absolute;
 
 
 }
+
+
+
 
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="box overflow-auto">
+    <div class=" overflow-auto">
           <div>
               <!-- <TextAnimation></TextAnimation> -->
           </div>
@@ -13,6 +13,8 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
             <CardTeamComponent></CardTeamComponent>
             <CarouselAbout></CarouselAbout>
+            <CarouselRecensioni></CarouselRecensioni>
+
     </div>
     
     
@@ -25,6 +27,7 @@
     import TextAnimation from '../components/TextAnimation.vue';
     import CardTeamComponent from '../components/CardTeamComponent.vue';
     import TeamAnimation from '../components/TeamAnimation.vue';
+    import CarouselRecensioni from '../components/CarouselRecensioni.vue';
         export default {
             
             name:'About',
@@ -33,7 +36,8 @@
                 TextAnimation,
                 CarouselAbout,
                 CardTeamComponent,
-                TeamAnimation
+                TeamAnimation,
+                CarouselRecensioni
             },
     
             
@@ -66,6 +70,8 @@
        
     text-shadow: 8px 8px 18px $red;
     }
+
+    
     
     
     </style>
