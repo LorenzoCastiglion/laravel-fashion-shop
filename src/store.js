@@ -93,7 +93,7 @@ export const store = reactive({
             storeItem:[
                 {
 
-                    pagename: 'Contrada Fiorentino 28 Appartamento 53',
+                    pagename: 'Contrada Fiorentino, 28, Appartamento 53',
                     url:"#"
                 },
                 {
@@ -114,6 +114,9 @@ export const store = reactive({
                 },
             ]
         },
+        
+
+
     ],
 
     carouselcard: [

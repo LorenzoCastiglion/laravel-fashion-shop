@@ -1,72 +1,76 @@
 <template>
 
     <div class="container">
-     <div class="d-flex justify-content-between foot">
-        <div>
-         <img src="../../public/img/txt-logo.png" alt="">
-           <!-- Copyright -->
-  <div class="mt-3 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2023 <span class="text-reset fw-bold">Boolness</span>
-  </div>
-  <!-- Copyright -->
+        <div class="d-flex justify-content-between foot">
+            <div>
+                <img class="img" src="../../public/img/logo.png" alt="">
+                <!-- Copyright -->
+                <div class="mt-3 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+                    © 2023 <span class="text-reset fw-bold">Boolness</span>
+                </div>
+                <!-- Copyright -->
+            </div>
+            <div class="text-white d-flex title" v-for="item in store.footerItems" :key="index">
+                <ul class="">{{ item.label }}<span class=" dot">.</span>
+                    <li v-for="x in item.storeItem" class="hover-underline-animation">
+                        {{ x.pagename }}
+                    </li>
+                </ul>
+            </div>
         </div>
-         <div class="text-white d-flex title" v-for="item in store.footerItems" :key="index">
-             <ul class="">{{ item.label }}<span class=" dot">.</span>
-             <li v-for="x in item.storeItem" class="hover-underline-animation">
-                 {{ x.pagename }}
-             </li>
-             </ul> 
-         </div>
-     </div>
     </div>
 
-  
-    
- </template>
- 
- <script>
- import { store } from '../store';
-     export default {
-         name:'AppFooter',
- 
-         data(){
-             return{
-                 store
-             }
-         }
-     }
- </script>
- 
- <style lang="scss" scoped>
- @use './../assets/styles/partials/variables' as *;
 
-.dot{
-    color:$red;
+
+</template>
+
+<script>
+import { store } from '../store';
+export default {
+    name: 'AppFooter',
+
+    data() {
+        return {
+            store
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+@use './../assets/styles/partials/variables' as *;
+
+.dot {
+    color: $red;
     font-size: 30px;
-    
+
+}
+
+img{
+    width: 100px;
 }
 
 
-
-
- ul{
+ul {
     font-size: 22px;
     font-weight: 500;
-    li{
+
+    li {
         font-size: 14px;
         font-weight: 300;
         list-style: none;
         color: grey;
     }
-    :hover{
+
+    :hover {
         color: white;
     }
 
 
- }
+}
 
- .hover-underline-animation {
-    
+.hover-underline-animation {
+
     position: relative;
 
 
@@ -81,7 +85,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color:$red;
+    background-color: $red;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -91,12 +95,11 @@
     transform-origin: bottom left;
 }
 
-@media only screen and (max-width: 570px ) {
+@media only screen and (max-width: 570px) {
 
- ul{
-    display: none;
- }
+    ul {
+        display: none;
+    }
 
 }
-    
- </style>
+</style>
