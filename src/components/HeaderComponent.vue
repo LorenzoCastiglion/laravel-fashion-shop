@@ -1,31 +1,5 @@
 <template>
-<!-- MENU BOOTSTRAP -->
-        <!--<header class="">
-        <nav class="container navbar navbar-expand-lg bg-body-tertiary ">
-            <div class="container-fluid">
-                <img  src="../../public/img/txt-logo.png" alt="">
-                <button id="burger" class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav  mb-2 mb-lg-0">
-                        <li id="nav-txt" class="nav-item text-white hover-underline-animation" v-for="(item, index) in store.menuItems" :key="index">
-                            <router-link :to="{ name: item.routeName }" active-class="active" class="nav-link text-white nav-link">
-                                {{ item.label }}<span class=" dot">.</span>
 
-                            </router-link>
-                        </li>
-
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-    </header>-->
-
-    <!-- FINE MENU BOOTSTRAP -->
 
     <header>
         <nav class="container navbar navbar-expand-lg bg-body-tertiary">
@@ -50,7 +24,7 @@
    
         <div id="NavMobile" >
 
-        <dic class="d-flex justify-content-end"><button @click="isMenuOpen = !isMenuOpen"><i class="fa-regular" :class="isMenuOpen ? 'fa-circle-xmark' : 'fa-bars'"></i></button></dic>
+        <div class="d-flex justify-content-end"><button @click="isMenuOpen = !isMenuOpen"><i class="fa-regular" :class="isMenuOpen ? 'fa-circle-xmark' : 'fa-bars'"></i></button></div>
         <transition name="fade">
             <div v-if="isMenuOpen" class=" text-end">
                 <ul class="navbar-nav  mb-2 mb-lg-0 ">
